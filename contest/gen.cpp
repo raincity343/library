@@ -45,7 +45,7 @@ vector<T> sample(T l, T r, int k) {
   } else {
     vector<T> a(n);
     iota(all(a), l);
-    shuffle(all(a));
+    shuffle(all(a), rng);
     a.resize(k);
     return a;
   }
