@@ -1,7 +1,7 @@
 #!/bin/bash
 for i in {1..100000}; do
   echo "$i"
-  python3 gen.py > ex.in
+  ./gen > ex.in
   if ! diff -Z <(./main < ex.in) <(./std < ex.in); then
     echo "Error"
     exit 1
